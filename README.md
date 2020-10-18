@@ -9,8 +9,9 @@
 - [Network](https://www.notion.so/f73fd948b77f4a4ea93add0eedb65149)
 - Web
 - Database
-- Architecture
 
+### Architecture
+ㅇㅇ
 ### How to Terraform Deploy
 
 ---
