@@ -1,7 +1,6 @@
 
 # AWS 3-Tier Architecture in Terraform
 
----
 
 ### Overview
 
