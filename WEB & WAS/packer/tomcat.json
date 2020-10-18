@@ -1,0 +1,42 @@
+
+{
+  "variables":{
+    "aws_access_key":"{{env `AWS_ACCESS_KEY_ID`}}",
+    "aws_secret_access_key":"{{env `AWS_SECRET_ACCESS_KEY`}}"
+  },
+  "builders":[
+    {
+      "type":"amazon-ebs",
+      "access_key":"{{user `aws_access_key`}}",
+      "secret_key":"{{user `aws_secret_access_key`}}",
+      "region":"ap-northeast-2",
+      "source_ami":"ami-00014daafdc4239f4",
+      "instance_type":"t3.small",
+      "ssh_username":"centos",
+      "ami_name":"ec2_centos-packer_{{timestamp}}"
+    }
+  ],
+  "provisioners":[
+    {
+      "type":"shell",
+      "inline":[
+        "sudo yum install -y wget",
+        "mkdir -p /tmp/lib && cd /tmp/lib",
+        "cd /tmp/lib",
+        "sudo wget https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz",
+        "sudo tar xfz openjdk-15_linux-x64_bin.tar.gz -C /usr/local",
+        "sudo wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.5.59/bin/apache-tomcat-8.5.59.tar.gz",
+        "sudo tar xfz apache-tomcat-8.5.59.tar.gz -C /usr/local",
+        "cd /usr/local",
+        "sudo ln -s apache-tomcat-8.5.59/ tomcat",
+        "sudo bash -c 'echo \"JAVA_HOME=/usr/local/jdk-15\" >> /etc/profile'",
+        "sudo bash -c 'echo \"JRE_HOME=/usr/local/jdk-15\" >> /etc/profile'",
+        "sudo bash -c 'echo \"CATALINA_HOME=/usr/local/tomcat\" >> /etc/profile'",
+        "sudo bash -c 'echo \"CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/lib/jsp-api.jar:$CATALINA_HOME/lib/servlet-api.jar\" >> /etc/profile'",
+        "sudo bash -c 'echo \"PATH=$PATH:$JAVA_HOME/bin:$CATALINA_HOME/bin\" >> /etc/profile'",
+        "sudo bash -c 'echo \"export JAVA_HOME CLASSPATH PATH CATALINA_HOME JRE_HOME\" >> /etc/profile'",
+        "source /etc/profile"
+      ]
+    }
+  ]
+}
