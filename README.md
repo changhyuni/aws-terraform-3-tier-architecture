@@ -21,7 +21,7 @@
 - aws cli를 통해 터미널에서 Credentials 설정을 해준뒤                                                                                        git repository 를 clone 합니다.
 
 ```bash
-$ git clone https://github.com/changhyuni/AWS-3TIER
+$ git clone https://github.com/changhyuni/aws_terraform_3-tier_1.0v
 ```
 
 - 클론된 디렉토리에서 "terraform init" 후 모듈에 사용할 값을 입력합니다.
