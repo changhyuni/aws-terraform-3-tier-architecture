@@ -11,7 +11,7 @@
 - [Database](https://github.com/changhyuni/AWS-3TIER/tree/main/Database)
 
 ### Architecture
-![ex_screenshot](./architecture.png)
+![ex_screenshot](./architere.png)
 ### How to Terraform Deploy
 
 ---
