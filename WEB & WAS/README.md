@@ -5,8 +5,8 @@ Packer 로 nginx 와 tomcat 의 AMI 이미지를 만듭니다. 만든 이미지�
 
 ### Web Instance Group
 
-- 사진
+![ex_screenshot](./public.png)
 
 ### Application Instance Group
 
-- 사진
+-![ex_screenshot](./private.png)
