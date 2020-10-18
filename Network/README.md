@@ -14,4 +14,4 @@ VPC를 만들고 퍼블릭 서브넷에 NAT & Bastion 역할을하는 인스턴�
 - WEB-SG : 모든IP 포트에서 접근가능하게 80번포트를 개방한다.
 - PRIVATE-ELB-SG: WEB-SG을 통과한 트래픽에 대해서만 내부로 들어올 수 있도록 8080 개방
 - WAS-SG **:** PRIVATE-ELB-SG을 통과한 트래픽에 대해서만 Application 으로 들어올 수 있도록 8080 개방
-- DB-SG: PRIVATE-ELB-SG을 통과한 트래픽에 대해서만 RDS로 들어올 수 있도록 5432 개방
+- DB-SG: PRIVATE-ELB-SG을 통과한 트래픽에 대해서만 RDS로 들어올 수 있도록 3306 개방
