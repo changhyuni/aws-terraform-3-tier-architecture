@@ -49,7 +49,7 @@ $ terraform destroy
 - 호스트에서 웹 계층에 외부로드밸런서로 "curl" 를 실행합니다. 웹 브라우저를를 테스팅합니다. 웹 브라우저를 이용하여 외부 ALB로 접속합니다.
 - Bastion Host 에서 SSH를 통해 웹 계층에있는 인스턴스에 접속하여 "curl" 로 내부로드 밸런서를 확인합니다.
 - Bastion Host 에서 SSH 로 애플리케이션 계층에 인스턴스로 접속합니다. 애플리케이션 인스턴스에서 RDS 인스턴스 (Port 3306) 로 'telnet'을 연결하여 데이터베이스에 연결합니다.
-- Apache Bench를 사용해 웹서버의 DNS나 외부 로드벨런서로 HTTP Request를 보내 오토스케일링 여부를 확인합니다.
+- JMeter를 사용해 웹서버의 DNS나 외부 로드벨런서로 HTTP Request를 보내 오토스케일링 여부를 확인합니다.
 
 ### Open Sources
 
@@ -57,7 +57,7 @@ $ terraform destroy
 - Packer
 - Terraform Cloud
 - git
-- Apache Bench
+- Apache JMeter
 
 ### References
 
