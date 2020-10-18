@@ -6,9 +6,6 @@
 
 애플리케이션 및 데이터 계층으로 구성된 AWS 3-Tier 아키텍쳐를 제공합니다. 사용자는 Route53 를 통해 전달된 다음 ALB를 거쳐 Nginx 웹 서버로 연결되고 Auto Scaling 을 제공합니다. 웹서버 계층에 인스턴스는 내부 ALB를 통해 애플리케이션 계층과 통신하고 Auto Scaling을 제공합니다. 애플리케이션 계층은 EC2위에 Tomcat Server가 존재하고 애플리케이션 계층만이 데이터 계층의 RDS와 통신할 수 있습니다. 각 계층간 통신은 보안 그룹을 사용하여 계층에 필요한 기능에 엔드 포인트에 연결할 수 있습니다.  
 
-### 참고사항
-"autoscaler" 모듈에 입력되는 AMI 값은 제공되는 [packer](https://github.com/changhyuni/AWS-3TIER/tree/main/WEB%20%26%20WAS/packer) 로 만들어야합니다.
-
 - [Network](https://github.com/changhyuni/AWS-3TIER/tree/main/Network)
 - [Web & WAS](https://github.com/changhyuni/AWS-3TIER/tree/main/WEB%20%26%20WAS)
 - [Database](https://github.com/changhyuni/AWS-3TIER/tree/main/Database)
@@ -44,6 +41,8 @@ $ terraform apply
 ```bash
 $ terraform destroy
 ```
+### 참고사항
+* "autoscaler" 모듈에 입력되는 AMI 값은 제공되는 [packer](https://github.com/changhyuni/AWS-3TIER/tree/main/WEB%20%26%20WAS/packer) 로 만들어야합니다.
 
 ### How to Test
 
