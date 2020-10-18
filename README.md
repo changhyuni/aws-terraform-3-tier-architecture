@@ -8,7 +8,7 @@
 
 - [Network](https://github.com/changhyuni/AWS-3TIER/tree/main/Network)
 - [Web & WAS](https://github.com/changhyuni/AWS-3TIER/tree/main/WEB%20%26%20WAS)
-- Database
+- [Database](https://github.com/changhyuni/AWS-3TIER/tree/main/Database)
 
 ### Architecture
 ![ex_screenshot](./아키텍쳐.png)
