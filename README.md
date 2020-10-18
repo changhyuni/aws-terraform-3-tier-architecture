@@ -11,7 +11,7 @@
 - Database
 
 ### Architecture
-ㅇㅇ
+![ex_screenshot](./아키텍쳐.png)
 ### How to Terraform Deploy
 
 ---
