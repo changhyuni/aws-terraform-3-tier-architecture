@@ -9,7 +9,7 @@
       "access_key":"{{user `aws_access_key`}}",
       "secret_key":"{{user `aws_secret_access_key`}}",
       "region":"ap-northeast-2",
-      "source_ami":"ami-0e32ec5bc225539f5",
+      "source_ami":"ami-064ab8637cf33f1bb",
       "instance_type":"t2.micro",
       "ssh_username":"ubuntu",
       "ami_name":"ec2_nginx-packer_{{timestamp}}"
