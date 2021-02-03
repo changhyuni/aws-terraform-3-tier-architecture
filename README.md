@@ -42,7 +42,7 @@ $ terraform apply
 $ terraform destroy
 ```
 ### Note
-* "autoscaler" 모듈에 입력되는 AMI 값은 제공되는 [packer](https://github.com/changhyuni/AWS-3TIER/tree/main/WEB%20%26%20WAS/packer) 로 만들어야합니다.
+* "autoscaler" 모듈에 입력되는 AMI 값은 제공되는 [packer](https://github.com/changhyuni/AWS-3TIER/tree/main/WEB%20%26%20WAS/packer) 로 만들어져 있습니다.
 
 ### How to Test
 
